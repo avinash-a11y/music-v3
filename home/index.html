@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link rel="shortcut icon" href="https://e7.pngegg.com/pngimages/862/923/png-clipart-video-player-computer-icons-media-player-play-button-blue-angle.png" type="image/x-icon">
+
+  <!-- Linking external css file -->
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Music App Niat</title>
+</head>
+
+<body>
+  <!-- Hesader Section Start-->
+  <header>
+    <section class="left-section">
+      <div class="hamberger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="back-forward-btn-container">
+        <i class="fa-solid fa-circle-chevron-left back-btn"></i>
+        <i class="fa-solid fa-circle-chevron-right forward-btn"></i>
+      </div>
+    </section>
+
+    <section class="mid-section">
+      <div class="header-search-div">
+        <i class="fa-solid fa-magnifying-glass header-search-icon" onclick="searchSong()"></i>
+        <input type="text" placeholder="what do you want to listen to?" id="searchBar">
+      </div>
+    </section>
+
+    <section class="right-section">
+      <div class="upgrade-dropdown-container">
+        <button class="upgrade-btn" onclick="navigateToPage()">Explore Premium</button>
+        <button class="upgrade-btn" onclick = "navigatepage()">About us</button>
+        <button class="upgrade-btn" onclick = "navigatepages()">contact us</button>
+
+
+        <div class="dropdown">
+          <div class="avatar-container">
+            <img
+              src="https://res.cloudinary.com/dlt4ash36/image/upload/v1700893730/User-Avatar-Profile-Download-PNG-Isolated-Image_mrgemq.png"
+              alt="dp" class="profile-image">
+          </div>
+          <p class="profile-name">username</p>
+          <i class="fa-solid fa-caret-down"></i>
+          <ul class="dropdown-inner">
+            <li onclick="toliked()">Liked Songs</li>
+            <li onclick="tolib()">Library</li>
+            <li onclick="topremium()">Explore Premium</li>
+            <li onclick="toabout()">About US</li>
+            <div class="logout-line"></div>
+            <li id="log-out">Log Out</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </header>
+  <!-- Header Section End-->
+
+  <!-- Start aside -->
+  <div class="aside-container-seperator">
+    <aside class="sidebar">
+      <div class="hide-sidebar">
+        <i class="fa-solid fa-close icons"></i>
+      </div>
+      <div class="sidebar-close-indicator">Close</div>
+      <nav>
+        <a href="#" class="sidebar-ellipsis">
+          <i class="fa-solid fa-ellipsis fa-xl icons"></i>
+        </a>
+
+        <a href="#" class="sidebar-home">
+          <i class="fa-solid fa-house-chimney fa-xl icons"></i>
+          <span class="txt">Home</span>
+        </a>
+
+        <a href="#" id="sidebar-search">
+          <i class="fa-solid fa-magnifying-glass icons"></i>
+          <span class="txt">Search</span>
+        </a>
+
+        <a onclick="tolib()">
+          <span class="material-icons-outlined icons">
+            subscriptions
+          </span>
+          <span class="txt">library</span>
+        </a>
+      </nav>
+
+      <nav>
+        <a onclick="toplaylist()">
+          <i class="fa-solid fa-square-plus  icons"></i>
+          <span class="txt" onclick="toplaylist()">Fav Playlist</span>
+        </a>
+
+        <a onclick="toliked()">
+          <img src="https://res.cloudinary.com/dlt4ash36/image/upload/v1700793800/liked-songs_efcequ.png"
+            alt="liked-songs-icon" class="nav-icons icons">
+          <span class="txt">Liked Songs</span>
+        </a>
+      </nav>
+      <hr>
+
+      <nav>
+        <h3>Singer</h3>
+        <div class="singer">
+          <div onclick="singers()">
+            <img src="https://th.bing.com/th/id/R.0a74f6efe814131bae968f7f781cc9ed?rik=TCg50OTrgh7Iaw&riu=http%3a%2f%2fimages5.fanpop.com%2fimage%2fphotos%2f24900000%2fAdele-MTV-VMA-2011-adele-24952608-1669-2048.jpg&ehk=9ChX6fvuyk0Qj6X%2f%2f0fYDbcGUAb5GpadmWEVWu9AEr8%3d&risl=&pid=ImgRaw&r=0" alt="">
+            <span>Adele</span>
+          </div>
+          <div onclick="singer1()">
+            <img src="https://res.cloudinary.com/dlt4ash36/image/upload/v1700793770/jubin-nautiyal_hvcinn.jpg" alt="">
+            <span>Beyoncé</span>
+          </div>
+          <div>
+            <img src="https://res.cloudinary.com/dlt4ash36/image/upload/v1700793773/sonu-nigam_ckadih.jpg" alt="">
+            <span onclick="singer2()">Ed Sheeran</span>
+          </div>
+        </div>
+      </nav>
+
+    </aside>
+    <!-- End aside -->
+
+    <!-- Main Section -->
+    <main>
+      <div class="main-section">
+
+        <section class="home-page">
+          <div class="playlist-sponsored">
+            <p>PLAYLIST</p>
+            <span>SPONSERED</span>
+          </div>
+          <div class="trending-home-container">
+            <a href="#"><img src="https://res.cloudinary.com/dlt4ash36/image/upload/v1700793770/play-song_qvjwqd.jpg"
+                alt="cover" class="home-playlist-cover"></a>
+            <div class="trending-song-container">
+              <h1>Top songs from telugu industry  </h1>
+              <p>Listen to the biggest trending song on NIAT... Only on the Trending Insta Reels
+                Playlist! Follow Now! </p>
+              <div class="home-buttons">
+                <button id="play-btn-home">Play</button>
+                <button id="follow-btn">Follow</button>
+                <i class="fa-solid fa-ellipsis fa-xl home-more-btn"></i>
+                <div class="more-playlist">More</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Home Page Song Collection-->
+        <section class="user-likes">
+          <div class="user-likes-title">
+            <h1>Popular song</h1>
+            <p>SHOW ALL</p>
+          </div>
+
+          <div class="cards">
+
+            <div class="song-cards">
+              <div class="song-cover">
+                <img alt="song-thumbnail" src = "https://images.indianexpress.com/2021/11/RRR-1200.jpg" width="170px">
+                <h4 class="song-title">Top Telugu Tracks of all time</h4>
+                <p class="song-artist">Catch the best of all time</p>
+                <i play-btn-home class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                <img alt="song-thumbnail" src = "https://i.ytimg.com/vi/20uEZ2TR-fw/maxresdefault.jpg" width="170px">
+                
+                <h4 class="song-title">Sad Telugu Melodies</h4>
+                <p class="song-artist">Soulful tunes for the heart.</p>
+                <i id="1" class="fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                              <img alt="song-thumbnail" src = "https://lyricsraag.com/wp-content/uploads/2019/08/pil5utttrxk.jpg" width="170px">
+
+
+                <h4 class="song-title">Top Telugu Romantics</h4>
+                <p class="song-artist">Fall in love with romantic songs</p>
+                <i id="2" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                <img alt="song-thumbnail" src = "https://i.ytimg.com/vi/LSTViZYPUyc/maxresdefault.jpg" width="170px">
+
+
+                <h4 class="song-title">New Music Telugu</h4>
+                <p class="song-artist">Latest Telugu Songs | 2023</p>
+                <i id="3" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://1.bp.blogspot.com/-yGD2BzXZxEU/W1_jmWwcRsI/AAAAAAAAC2M/ddw3jLmXdO8WeLG4Hf8FlQ-U3YZr5uNkACLcBGAs/s1600/Ninu%2BChoodaka%2BTelugu%2BSong%2BLyrics%2B-%2BVasantham%2B%25282003%2529.jpg" width="170px">
+
+
+                <h4 class="song-title">Tollywood Mush</h4>
+                <p class="song-artist">Songs be the love story</p>
+                <i id="4" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Best of artist -->
+        <section class="user-likes">
+          <div class="user-likes-title">
+            <h1>Best of artist</h1>
+            <p>SHOW ALL</p>
+          </div>
+
+          <div class="cards">
+
+           
+
+              <div class="song-cards">
+                <div class="song-cover">
+                  <img alt="song-thumbnail" src = "https://images.indianexpress.com/2021/11/RRR-1200.jpg" width="170px">
+                  <h4 class="song-title">Top Telugu Tracks of all time</h4>
+                  <p class="song-artist">Catch the best of all time</p>
+                  <i id="0" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+                </div>
+              </div>
+  
+
+          
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://i1.sndcdn.com/artworks-JmPcXh1EV4EZ-0-t500x500.png" width="170px">
+
+
+                <h4 class="song-title">Top Telugu Tracks of all time</h4>
+                <p class="song-artist">Tollywood crooner's essential songs.</p>
+                <i id="6" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://wikibio.in/wp-content/uploads/2023/11/Honeymoon.jpg" width="170px">
+
+
+                <h4 class="song-title">Sad Telugu Melodies</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="7" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://flxt.tmsimg.com/assets/p13482958_p_v8_aa.jpg" width="170px">
+
+
+                <h4 class="song-title">Top Telugu Romantics</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="8" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://wikibio.in/wp-content/uploads/2023/11/Honeymoon.jpg" width="170px">
+
+
+                <h4 class="song-title">New Music Telugu</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="9" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Recently Played -->
+        <section class="user-likes">
+          <div class="user-likes-title">
+            <h1>More of what you like</h1>
+            <p>SHOW ALL</p>
+          </div>
+
+          <div class="cards">
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://th.bing.com/th/id/OIP.0tASNhfG5BuAddv-vRBcqgHaEG?w=640&h=355&rs=1&pid=ImgDetMain" width="170px">
+
+
+                <h4 class="song-title">Tollywood Mush</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="10" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://i.ytimg.com/vi/20uEZ2TR-fw/maxresdefault.jpg" width="170px">
+
+
+                <h4 class="song-title">Keeravani</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="11" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://wikibio.in/wp-content/uploads/2023/11/Honeymoon.jpg" width="170px">
+
+
+                <h4 class="song-title">Top Hindi Tracks of all time</h4>
+                <p class="song-artist">Chirratan Bhatt</p>
+                <i id="12" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://timesofindia.indiatimes.com/photo/81747297/size-194028/81747297.jpg" width="170px">
+
+
+                <h4 class="song-title">Sad Telugu Melodies</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="13" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+               <img alt="song-thumbnail" src = "https://i.ytimg.com/vi/u4piDiQDYf4/maxresdefault.jpg" width="170px">
+                <h4 class="song-title">Top Telugu Romantics</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="14" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Top Hindi Tracks -->
+        <section class="user-likes">
+          <div class="user-likes-title">
+            <h1>Top Telugu Tracks</h1>
+            <p>SHOW ALL</p>
+          </div>
+
+          <div class="cards">
+
+            <div class="song-cards">
+              <div class="song-cover">
+                  <img alt="song-thumbnail" src = "https://i.ytimg.com/vi/zNkcSFysyDo/maxresdefault.jpg" width="170px">
+
+
+                <h4 class="song-title">New Music Telugu</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="15" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                   <img alt="song-thumbnail" src = "https://th.bing.com/th/id/OIP.8aj0Ox8KHZq-zjrZuaX_BgHaES?w=768&h=444&rs=1&pid=ImgDetMain" width="170px">
+
+
+                <h4 class="song-title">Tollywood Mush</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="16" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                   <img alt="song-thumbnail" src = "https://th.bing.com/th/id/OIP.JsquyLKrgzJmbVEHiHtuAgHaEK?w=1024&h=576&rs=1&pid=ImgDetMain" width="170px">
+
+
+                <h4 class="song-title">Dil Ibadat</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="17" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://i.ytimg.com/vi/hznAzCtFmc0/maxresdefault.jpg" width="170px">
+
+
+                <h4 class="song-title">Top Hindi Tracks of all time</h4>
+                <p class="song-artist">Chirratan Bhatt</p>
+                <i id="18" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://th.bing.com/th/id/OIP.0tASNhfG5BuAddv-vRBcqgHaEG?w=640&h=355&rs=1&pid=ImgDetMain" width="170px">
+
+
+                <h4 class="song-title">Sad Hindi Melodies</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="19" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Favourite Song -->
+        <section class="user-likes">
+          <div class="user-likes-title">
+            <h1>Favourite song</h1>
+            <p>SHOW ALL</p>
+          </div>
+          <div class="cards">
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://i.ytimg.com/vi/QM3FKzg1LzQ/maxresdefault.jpg" width="170px">
+
+
+                <h4 class="song-title">Top Hindi Romantics</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="20" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://i.ytimg.com/vi/QM3FKzg1LzQ/maxresdefault.jpg" width="170px">
+
+
+                <h4 class="song-title">New Music Hindi</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="21" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://th.bing.com/th/id/OIP.0tASNhfG5BuAddv-vRBcqgHaEG?w=640&h=355&rs=1&pid=ImgDetMain" width="170px">
+
+
+                <h4 class="song-title">Bollybood Mush</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="22" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://th.bing.com/th/id/OIP.8aj0Ox8KHZq-zjrZuaX_BgHaES?w=768&h=444&rs=1&pid=ImgDetMain" width="170px">
+
+
+                <h4 class="song-title">Dil Ibadat</h4>
+                <p class="song-artist">The essential tracks, all in one playlist.</p>
+                <i id="23" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+
+            <div class="song-cards">
+              <div class="song-cover">
+                                                <img alt="song-thumbnail" src = "https://th.bing.com/th/id/OIP.8aj0Ox8KHZq-zjrZuaX_BgHaES?w=768&h=444&rs=1&pid=ImgDetMain" width="170px">
+
+
+                <h4 class="song-title">Party Vibes of all time</h4>
+                <p class="song-artist">DSP</p>
+                <i id="24" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer Section Start-->
+  <footer>
+    <div class="footer-section">
+      <section class="song-details">
+        <img src="https://res.cloudinary.com/dlt4ash36/image/upload/v1700793770/play-song_qvjwqd.jpg" alt="play-song"
+          id="masterCover">
+        <div class="playing-song-info">
+          <div class="song-info">
+            <h1 id="masterSongTitle">Jr ntr</h1>
+            <p id="masterSongInfo">DSP , Dhoni , Virat</p>
+          </div>
+          <i class="fa-regular fa-heart" id="fav-song"></i>
+        </div>
+      </section>
+
+      <section class="song-status">
+        <div class="song-control">
+          <i class="fa-solid fa-shuffle" id="shuffleMusic"></i>
+          <p class="shuffle">Enable shuffle</p>
+          <div id="shuffle-enable-indicator"></div>
+          <i class="fa-solid fa-backward-step" id="previous"></i>
+          <p class="previous">Previous</p>
+          <i class="fa-solid fa-circle-play fa-2x" id="masterPlayBtn"></i>
+          <p class="play">Play</p>
+          <i class="fa-sharp fa-solid fa-forward-step" id="next"></i>
+          <p class="next">Next</p>
+          <i class="fa-solid fa-repeat" id="repeatMode"></i>
+          <p class="enable-disable-repeat">Enable repeat</p>
+          <div id="repeat-enable-indicator">1</div>
+        </div>
+
+        <div class="progressbar-container">
+          <span id="musicStart">0:00</span>
+          <div class="custom-progress">
+            <div class="progress-bar" id="customProgressBar">
+              <div class="progress" id="customProgress"></div>
+              <div class="progress-thumb" id="customProgressThumb"></div>
+            </div>
+          </div>
+          <span id="musicEnd">0:00</span>
+        </div>
+      </section>
+
+      <section class="song-directory">
+        <i class="fa-solid fa-music"></i>
+        <p class="lyrics">Lyric</p>
+        <i class="fa-solid fa-bars song-queue"></i>
+        <p class="queue">Queue</p>
+        <i class="fa-solid fa-computer"></i>
+        <p class="connectivity">Connect to a device</p>
+        <i class="fa-solid fa-duotone fa-volume-high" id="volIcon"></i>
+        <p class="mute">Mute</p>
+        <input type="range" value="100" min="1" max="100" step="1" class="volume-seekbar">
+      </section>
+    </div>
+  </footer>
+
+  <!-- Footer Section End-->
+
+  <!-- External javascript -->
+  <script src="index.js"></script>
+
+  <!-- Fonth Awesome Link -->
+  <script src="https://kit.fontawesome.com/5ad84bde35.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

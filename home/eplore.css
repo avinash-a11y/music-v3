@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    background-color: #111111; /* Darker black for header */
+    color: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #333333;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000; /* Red color for the logo */
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: #ff0000; /* Red color on hover */
+  }
+  
+  .main-content {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .hero-section {
+    margin-bottom: 40px;
+  }
+  
+  .hero-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff0000; /* Red for emphasis */
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #b3b3b3;
+  }
+  
+  .cta-button {
+    background-color: #ff0000; /* Red button */
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+  }
+  
+  .pricing-section {
+    padding: 50px 20px;
+    background-color: #111111;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  
+  .pricing-section h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+  
+  .pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #1a1a1a; /* Dark card background */
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ff0000; /* Red for headings */
+  }
+  
+  .card p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .card li {
+    margin-bottom: 10px;
+    color: #b3b3b3;
+  }
+  
+  .select-button {
+    background-color: #ff0000; /* Red button */
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .select-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+  }
+  
+  .premium-card {
+    border: 2px solid #ff0000; /* Red border for premium card */
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111111;
+    color: #b3b3b3;
+  }

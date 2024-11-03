@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liked Songs - MusicApp</title>
+  <link rel="stylesheet" href="liked-songs-styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <h1 class="logo" onclick = "tohome()">MusicApp</h1>
+          <nav class="nav">
+            <ul>
+              <li onclick="tohome()"><a>Home</a></li>
+              <li><a onclick="toplaylist()">Playlists</a></li>
+              <li><a onclick="tolib()">Library</a></li>
+              <li><a onclick="tocontact()">Support</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+  <main class="main-content">
+    <section class="liked-songs-section">
+      <h2>Liked Songs</h2>
+      <div class="songs-list">
+        <div class="song-item">
+          <img src="https://i.ytimg.com/vi/20uEZ2TR-fw/maxresdefault.jpg" alt="Album Cover 1" class="album-cover">
+          <div class="song-info">
+            <p class="song-title">Saranga Dariya</p>
+            <p class="artist-name">Mangli</p>
+          </div>
+        </div>
+        <div class="song-item">
+          <img src="https://timesofindia.indiatimes.com/photo/81747297/size-194028/81747297.jpg" alt="Album Cover 2" class="album-cover">
+          <div class="song-info">
+            <p class="song-title">Chitti</p>
+            <p class="artist-name">Ram Miryala</p>
+          </div>
+        </div>
+        <div class="song-item">
+          <img src="https://images.indianexpress.com/2021/11/RRR-1200.jpg" alt="Album Cover 3" class="album-cover">
+          <div class="song-info">
+            <p class="song-title">Naatu Naatu</p>
+            <p class="artist-name">Rahul Sipiligunj</p>
+          </div>
+        </div>
+        <div class="song-item">
+          <img src="https://th.bing.com/th/id/OIP.8aj0Ox8KHZq-zjrZuaX_BgHaES?w=768&h=444&rs=1&pid=ImgDetMain" alt="Album Cover 4" class="album-cover">
+          <div class="song-info">
+            <p class="song-title">Etthara Jenda</p>
+            <p class="artist-name">(Vishal Mishra)</p>
+          </div>
+        </div>
+        <div class="song-item">
+          <img src="https://i.ytimg.com/vi/u4piDiQDYf4/maxresdefault.jpg" alt="Album Cover 5" class="album-cover">
+          <div class="song-info">
+            <p class="song-title">Sardar</p>
+            <p class="artist-name">Devi Sri Prasad</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 MusicApp. All rights reserved.</p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>

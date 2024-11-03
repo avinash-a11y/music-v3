@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Premium - MusicApp</title>
+  <link rel="stylesheet" href="eplore.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo" onclick = "tohome()">MusicApp</h1>
+      <nav class="nav">
+        <ul>
+          <li onclick="tohome()"><a>Home</a></li>
+          <li><a onclick="toplaylist()">Playlists</a></li>
+          <li><a onclick="tolib()">Library</a></li>
+          <li><a onclick="tocontact()">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero-section">
+      <h2>Experience Music Like Never Before</h2>
+      <p>Subscribe to MusicApp Premium for an ad-free, high-quality audio experience with unlimited skips and offline downloads.</p>
+      <button class="cta-button">Get Premium</button>
+    </section>
+
+    <section class="pricing-section">
+      <h3>Choose Your Plan</h3>
+      <div class="pricing-cards">
+        <div class="card">
+          <h4>Free</h4>
+          <p>$0/month</p>
+          <ul>
+            <li>Ad-supported music</li>
+            <li>Limited skips</li>
+            <li>Standard audio quality</li>
+          </ul>
+          <button class="select-button">Stay Free</button>
+        </div>
+        <div class="card premium-card">
+          <h4>Premium</h4>
+          <p>$9.99/month</p>
+          <ul>
+            <li>Ad-free experience</li>
+            <li>Unlimited skips</li>
+            <li>High-quality audio</li>
+            <li>Offline downloads</li>
+          </ul>
+          <button class="select-button">Go Premium</button>
+        </div>
+        <div class="card">
+          <h4>Family</h4>
+          <p>$14.99/month</p>
+          <ul>
+            <li>6 accounts for families</li>
+            <li>Ad-free and unlimited skips</li>
+            <li>High-quality audio</li>
+            <li>Offline downloads</li>
+          </ul>
+          <button class="select-button">Choose Family</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 MusicApp. All rights reserved.</p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>

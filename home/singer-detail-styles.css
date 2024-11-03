@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  line-height: 1.6;
+}
+
+.header {
+  background-color: #1a1a1a; /* Dark header */
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff0000; /* Red for the logo */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ff0000; /* Red on hover */
+}
+
+.main-content {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.singer-detail-section {
+  padding: 20px;
+}
+
+.singer-detail-section h2 {
+  font-size: 36px;
+  color: #ff0000; /* Red for main heading */
+  margin-bottom: 20px;
+}
+
+.singer-photo {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.personal-info, .bio, .achievements, .popular-songs, .concerts-tours, .social-media {
+  background-color: #222; /* Darker card background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  flex: 1;
+}
+
+h3 {
+  color: #ff0000; /* Red for subheadings */
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.social-media a {
+  color: #ff0000; /* Red for social media links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #e60000; /* Darker red on hover */
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #b3b3b3;
+  margin-top: 40px;
+}
