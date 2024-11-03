@@ -69,7 +69,7 @@ function userLogin() {
     // Retrive userdata from LocalStorage
     const userData = JSON.parse(localStorage.getItem("userData")) || [];
 
-    if (userEmail.toLowerCase() === userData.email && loginPassword === userData.password) {
+    if (loginPassword === userData.password) {
         window.open("../home/index.html", "_self");
     }
     else {
