@@ -148,7 +148,10 @@ header {
     font-weight: 500;
     width: 80%;
 }
-
+.centering{
+    display: flex;
+    justify-content: center;
+}
 #eye-icon {
     color: #ff0000;
 }
@@ -175,9 +178,22 @@ a {
     transition: ease-in-out 0.2s;
     cursor: pointer;
     text-transform: uppercase;
-    margin-left: 180px;
+    margin: 2px;
 }
 
+#guest-login-btn {
+    background-color: red;
+    width: 7rem;
+    padding: 13px 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 2px;
+}
 .bottom-line {
     margin-top: 20px;
     margin-bottom: 30px;
@@ -302,5 +318,9 @@ a {
 /* Hover Efect */
 
 #signup-btn:hover {
+    transform: scale(1.05);
+}
+
+#guest-login-btn:hover {
     transform: scale(1.05);
 }

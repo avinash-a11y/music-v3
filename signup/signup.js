@@ -147,4 +147,19 @@ signupBtn.onclick = () => {
     }
 }
 
+const guestLoginBtn = document.getElementById("guest-login-btn");
+
+// Handle Guest Login
+guestLoginBtn.onclick = () => {
+    const guestUser = {
+        username: "Guest User",
+        email: "guest@example.com",
+        avatar: "https://i.pinimg.com/originals/38/47/9c/38479c637a4ef9c5ced95ca66ffa2f41.png",  // You can set a default guest avatar URL here
+        guest: true  // Flag to indicate it's a guest user
+    };
+
+    // Save guest data in local storage and redirect to the main page
+    localStorage.setItem("userData", JSON.stringify(guestUser));
+    window.location.href = "../home/index.html";  // Update this path to your main page
+};
 
