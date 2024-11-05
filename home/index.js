@@ -678,3 +678,6 @@ function topremium() {
 function tocontact() {
     window.location.href = "contact.html";
 }
+function tochat() {
+    window.location.href = "chat.html";
+}

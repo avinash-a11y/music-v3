@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: #111111; /* Darker black for header */
+    color: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #333333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000; /* Red color for the logo */
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ff0000; /* Red color on hover */
+}
+
+.chatbot-section {
+    background: #1c1c1c; /* Darker background for the chatbot */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+    margin: 20px auto; /* Centering the chatbot section */
+    overflow: hidden;
+}
+
+.chatbot-header {
+    background-color: #990000; /* Dark red background for the header */
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chatbot-header h2 {
+    color: white; /* White text for the header */
+}
+
+.chatbot-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbot-messages {
+    padding: 20px;
+    height: 300px;
+    overflow-y: auto;
+    border-bottom: 1px solid #990000; /* Dark red border */
+    background: #2a2a2a; /* Dark grey for the messages area */
+    color: white; /* White text for better contrast */
+}
+
+.chatbot-input-container {
+    display: flex;
+    padding: 10px;
+    background: #1c1c1c; /* Matching the section background */
+}
+
+#userInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #990000; /* Dark red border for input */
+    border-radius: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background: #333; /* Dark background for input */
+    color: white; /* White text in input field */
+}
+
+#userInput:focus {
+    outline: none;
+    border-color: #ff0000; /* Bright red on focus */
+}
+
+#sendBtn {
+    background-color: #ff0000; /* Bright red button */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#sendBtn:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+#sendBtn:active {
+    transform: scale(0.95);
+}
+
+strong {
+    color: #ff0000; /* Bright red for sender's name */
+}
+
+.chatbot-messages div {
+    margin-bottom: 10px;
+}
+
+.chatbot-messages div:last-child {
+    margin-bottom: 0;
+}

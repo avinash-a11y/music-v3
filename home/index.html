@@ -42,6 +42,8 @@
         <button class="upgrade-btn" onclick="navigateToPage()">Explore Premium</button>
         <button class="upgrade-btn" onclick = "navigatepage()">About us</button>
         <button class="upgrade-btn" onclick = "navigatepages()">contact us</button>
+        <button class="upgrade-btn" onclick = "tochat()">Chat with bot</button>
+
 
 
         <div class="dropdown">
@@ -93,6 +95,12 @@
             subscriptions
           </span>
           <span class="txt">Library</span>
+        </a>
+        <a onclick="tochat()">
+          <span class="material-icons-outlined icons">
+            subscriptions
+          </span>
+          <span class="txt">Chat</span>
         </a>
       </nav>
 
@@ -171,7 +179,7 @@
                 <img alt="song-thumbnail" src = "https://images.indianexpress.com/2021/11/RRR-1200.jpg" width="170px">
                 <h4 class="song-title">Top Telugu Tracks of all time</h4>
                 <p class="song-artist">Catch the best of all time</p>
-                <i play-btn-home class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+                <i id = "play-btn-home" class=" fa-solid fa-circle-play fa-3x cover-play-btn"></i>
               </div>
             </div>
 
@@ -181,7 +189,7 @@
                 
                 <h4 class="song-title">Sad Telugu Melodies</h4>
                 <p class="song-artist">Soulful tunes for the heart.</p>
-                <i id="1" class="fa-solid fa-circle-play fa-3x cover-play-btn"></i>
+                <i id="play-btn-home" class="fa-solid fa-circle-play fa-3x cover-play-btn"></i>
               </div>
             </div>
 
